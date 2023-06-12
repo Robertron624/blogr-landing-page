@@ -109,11 +109,83 @@ body {
 
     /* Background gradient - Intro/CTA mobile nav: */
 
-    --very-light-red: hsl(13, 100%, 72%);
-    --Light-red: hsl(353, 100%, 62%);
+    --very-light-red-lg: hsl(13, 100%, 72%);
+    --light-red-lg: hsl(353, 100%, 62%);
 
     /* Background gradient - body: */
 
     --very-dark-gray-blue: hsl(237, 17%, 21%);
     --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+}
+
+header {
+    position: relative;
+}
+
+header .background-shape{
+    background: linear-gradient(180deg,var(--very-light-red-lg) 0%, var(--light-red-lg) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    border-radius: 0 0 0 70px;
+    height: 28rem;
+}
+
+.background-shape svg {
+    border-radius: 0 0 0 70px;
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem 0;
+}
+
+main .intro{
+    padding: 6rem 1rem 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.intro h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-family: var(--familiy-overpass);
+}
+
+.intro p {
+    font-size: .8rem;
+    margin-bottom: 2rem;
+}
+
+.intro .buttons button:nth-of-type(1) {
+    background: var(--white);
+    color: var(--light-red);
+    border: none;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    margin: 0 .5rem;
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.intro .buttons button:nth-of-type(2) {
+    background: transparent;
+    color: var(--grayish-blue);
+    border: 1px solid var(--grayish-blue);
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    margin: 0 .5rem;
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
 }
