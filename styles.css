@@ -66,7 +66,6 @@ select {
     }
 }
 
-
 /* Set core body defaults */
 body {
     min-height: 100vh;
@@ -74,8 +73,8 @@ body {
     line-height: 1.5;
 
     /* Font families */
-    --familiy-overpass: 'Overpass', sans-serif;
-    --family-ubuntu: 'Ubuntu', sans-serif;
+    --familiy-overpass: "Overpass", sans-serif;
+    --family-ubuntu: "Ubuntu", sans-serif;
 
     font-family: var(--family-ubuntu);
 
@@ -94,7 +93,7 @@ body {
 
     /* ### Neutral */
     /* (text) */
-    --white : hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
 
     /* (footer text) */
     --grayish-blue: hsl(240, 2%, 79%);
@@ -116,15 +115,18 @@ body {
 
     --very-dark-gray-blue: hsl(237, 17%, 21%);
     --very-dark-desaturated-blue: hsl(237, 23%, 32%);
-
 }
 
 header {
     position: relative;
 }
 
-header .background-shape{
-    background: linear-gradient(180deg,var(--very-light-red-lg) 0%, var(--light-red-lg) 100%);
+header .background-shape {
+    background: linear-gradient(
+        180deg,
+        var(--very-light-red-lg) 0%,
+        var(--light-red-lg) 100%
+    );
     position: absolute;
     top: 0;
     left: 0;
@@ -145,7 +147,7 @@ header .inner {
     padding: 2rem 1rem 0;
 }
 
-main .intro{
+main .intro {
     padding: 6rem 1rem 0;
     text-align: center;
     color: var(--white);
@@ -160,7 +162,7 @@ main .intro{
 }
 
 .intro p {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin-bottom: 2rem;
 }
 
@@ -169,12 +171,12 @@ main .intro{
     color: var(--light-red);
     border: none;
     border-radius: 2rem;
-    padding: .5rem 1rem;
-    margin: 0 .5rem;
-    font-size: .8rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .intro .buttons button:nth-of-type(2) {
@@ -182,10 +184,58 @@ main .intro{
     color: var(--grayish-blue);
     border: 1px solid var(--grayish-blue);
     border-radius: 2rem;
-    padding: .5rem 1rem;
-    margin: 0 .5rem;
-    font-size: .8rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ## main */
+
+main .design-future {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.design-future .design-future-text h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-family: var(--familiy-overpass);
+}
+
+.features {
+    margin-top: 2rem;
+}
+
+.features div {
+    padding: 0rem 1rem;
+}
+
+.features div:nth-of-type(1) {
+    margin-bottom: 2.5rem;
+}
+
+.features div h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-family: var(--familiy-overpass);
+    max-width: 12rem;
+    margin-inline: auto;
+}
+
+.features div p {
+    font-size: 0.8rem;
+    color: var(--grayish-blue);
+    margin-inline: auto;
+    max-width: 20rem;
+}
+
+/* ## Media Queries */
+@media screen and (min-width: 768px) {
 }
