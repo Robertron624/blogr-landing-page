@@ -119,8 +119,17 @@ body {
     --very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
 
+/**********/
+/* Header */
+/**********/
+
 header {
     position: relative;
+}
+
+header button.hamburger {
+    background: none;
+    border: none;
 }
 
 header .background-shape {
@@ -148,6 +157,99 @@ header .inner {
     align-items: center;
     padding: 2rem 1rem 0;
 }
+
+/* Mobile Menu */
+
+header .mobile-menu-modal {
+    width: 90%;
+    padding: 2rem 1rem;
+}
+
+.mobile-menu-modal .account-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0 0;
+}
+
+.mobile-menu-modal .account-btns button {
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 8rem;
+    margin-inline: auto;
+    border: none;
+    padding: .8rem 0;
+}
+
+.mobile-menu-modal .account-btns .login-btn {
+    background: var(--white);
+    color: var(--very-dark-blue);
+}
+
+.mobile-menu-modal .account-btns .signup-btn {
+    background: linear-gradient(
+        45deg,
+        var(--very-light-red-lg) 0%,
+        var(--light-red-lg) 100%
+    );
+    color: var(--white);
+}
+
+.mobile-menu-modal .mobile-accordion {
+    overflow: hidden;
+}
+
+.mobile-menu-modal .mobile-accordion-button {
+    display: flex;
+    gap: .5rem;
+    background: none;
+    width: 5rem;
+    margin-inline: auto;
+    align-items: center;
+    border: none;
+    padding: 0;
+    font-weight: 700;
+}
+
+.mobile-menu-modal .mobile-accordion-content {
+    background-color: var(--grayish-blue);
+    border-radius: 10px;
+    padding: 1rem 0;
+
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all 0.25s ease-out;
+    opacity: 0;
+}
+
+.mobile-menu-modal .accordion-active .mobile-accordion-content{
+    opacity: 1;
+    margin: .8rem 0;
+}
+
+.mobile-menu-modal .mobile-accordion-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.mobile-menu-modal .mobile-accordion-content ul li a {
+    color: var(--very-dark-grayish-blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/********/
+/* Main */
+/********/
 
 main .intro {
     padding: 6rem 1rem 0;
@@ -194,13 +296,13 @@ main .intro {
     transition: all 0.3s ease-in-out;
 }
 
-/* ## main */
-
 main .design-future {
     margin-top: 10rem;
     text-align: center;
     margin-bottom: 16rem;
 }
+
+/* Design future section */
 
 .design-future .design-future-text h2 {
     font-size: 2rem;
@@ -298,7 +400,9 @@ section.state-of-art .state-of-art-text {
     margin-bottom: 2rem;
 }
 
-/* Footer section */
+/**********/
+/* Footer */
+/**********/
 
 footer {
     color: var(--white);
@@ -335,6 +439,9 @@ footer .footer-links .link-group ul li a {
     transition: all 0.3s ease-in-out;
 }
 
-/* ## Media Queries */
+/*****************/
+/* Media Queries */
+/*****************/
+
 @media screen and (min-width: 768px) {
 }
