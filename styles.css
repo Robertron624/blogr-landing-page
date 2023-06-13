@@ -23,6 +23,8 @@ dd {
 ul,
 ol {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Set core root defaults */
@@ -197,7 +199,7 @@ main .intro {
 main .design-future {
     margin-top: 10rem;
     text-align: center;
-    margin-bottom: 18rem;
+    margin-bottom: 16rem;
 }
 
 .design-future .design-future-text h2 {
@@ -220,6 +222,7 @@ main .design-future {
     margin-bottom: 2.5rem;
 }
 
+.features-two .features-two-text .feature h3,
 .features div h3 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -230,6 +233,7 @@ main .design-future {
     margin-inline: auto;
 }
 
+.features-two .features-two-text .feature p,
 .features div p {
     font-size: 0.8rem;
     color: var(--grayish-blue);
@@ -241,7 +245,7 @@ main .design-future {
 
 section.state-of-art {
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
     position: relative;
 }
 
@@ -273,6 +277,62 @@ section.state-of-art .state-of-art-text {
     line-height: 1.2;
     margin-bottom: 2rem;
     font-family: var(--familiy-overpass);
+}
+
+/* Features 2 */
+
+.features-two {
+    margin-bottom: 6rem;
+}
+
+.features-two .features-two-text {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.features-two .features-two-text .feature h3 {
+    margin-bottom: 2rem;
+}
+
+.features-two .features-two-text .feature:nth-of-type(1) {
+    margin-bottom: 2rem;
+}
+
+/* Footer section */
+
+footer {
+    color: var(--white);
+    background-color: var(--very-dark-black-blue);
+    padding: 5rem 0 2rem;
+    text-align: center;
+    border-radius: 0 70px 0 0;
+}
+
+footer .footer-logo {
+    margin-bottom: 4rem;
+    margin-inline: auto;
+}
+
+footer .footer-links .link-group {
+    margin-bottom: 2.5rem;
+}
+
+footer .footer-links .link-group ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+footer .footer-links .link-group h4 {
+    margin-bottom: 1.5rem;
+}
+
+footer .footer-links .link-group ul li a {
+    color: var(--grayish-blue);
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 /* ## Media Queries */
