@@ -197,6 +197,7 @@ main .intro {
 main .design-future {
     margin-top: 10rem;
     text-align: center;
+    margin-bottom: 18rem;
 }
 
 .design-future .design-future-text h2 {
@@ -234,6 +235,44 @@ main .design-future {
     color: var(--grayish-blue);
     margin-inline: auto;
     max-width: 20rem;
+}
+
+/* State of the art section */
+
+section.state-of-art {
+    text-align: center;
+    margin-bottom: 8rem;
+    position: relative;
+}
+
+.state-of-art .state-of-art-image {
+    position: absolute;
+    bottom: 64%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.state-of-art .state-of-art-text {
+    padding: 16rem 2rem 6rem;
+    background-color: var(--very-dark-gray-blue);
+    color: var(--white);
+    border-radius: 0 60px 0 60px;
+    background-image: url(/images/bg-pattern-circles.svg);
+    background-position: center top -15rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.state-of-art-text h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-family: var(--familiy-overpass);
 }
 
 /* ## Media Queries */
