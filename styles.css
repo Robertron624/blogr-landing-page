@@ -123,6 +123,8 @@ body {
     --very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
     --custom-max-width: 1250px;
+
+    overflow-x: hidden;
 }
 
 /**********/
@@ -596,6 +598,54 @@ footer .footer-links .link-group ul li a {
 
     header .background-shape svg {
         margin-top: -2rem;
+    }
+
+    /* Designed for the future */
+
+    .design-future .design-future-text h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .design-future .design-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: var(--custom-max-width);
+        margin-inline: auto;
+    }
+
+    .design-future .design-content .features {
+        text-align: left;
+        max-width: 32rem;
+    }
+
+    .design-future .design-content .features div {
+        padding: 0;
+    }
+
+
+    .design-future .design-content .features div p,
+    .design-future .design-content .features div h3 {
+        max-width: unset;
+    }
+
+    .design-future-image {
+        order: 1;
+        position: relative;
+    }
+
+    .design-future-image img {
+        max-width: unset;
+        width: 40rem;
+        position: absolute;
+        top: -40%;
+        left: 50%;
+    }
+
+    /* State of the art section */
+
+    .state-of-art .state-of-art-image {
+        bottom: 0%;
     }
 
 }
