@@ -116,3 +116,17 @@ desktopLinkGroups.forEach(linkGroup => {
     });
 });
 
+// Get current device width
+
+const deviceWidth = window.innerWidth;
+
+console.log("first device width: " + deviceWidth);
+
+const headerBackgroundShape = document.querySelector('header .background-shape svg');
+
+if (deviceWidth >= 768) {
+    headerBackgroundShape.setAttribute('viewBox', '200 200 400 600');
+    headerBackgroundShape.setAttribute('width', '1000');
+    headerBackgroundShape.setAttribute('height', '480');
+}
+
