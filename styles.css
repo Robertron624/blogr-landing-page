@@ -52,6 +52,10 @@ select {
     font: inherit;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
@@ -158,11 +162,23 @@ header .inner {
     padding: 2rem 1rem 0;
 }
 
+header .inner .desktop-right {
+    display: none;
+}
+
+header .desktop-left .desktop-links {
+    display: none;
+}
+
 /* Mobile Menu */
 
 header .mobile-menu-modal {
     width: 90%;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
+    margin-top: 5rem;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .mobile-menu-modal .account-btns {
@@ -170,8 +186,10 @@ header .mobile-menu-modal {
     flex-direction: column;
     gap: 1rem;
     padding: 2rem 0 0;
+    border-top: 1px solid var(--grayish-blue);
 }
 
+header .desktop-right button, 
 .mobile-menu-modal .account-btns button {
     border-radius: 2rem;
     font-size: 1rem;
@@ -183,6 +201,7 @@ header .mobile-menu-modal {
     border: none;
     padding: .8rem 0;
 }
+
 
 .mobile-menu-modal .account-btns .login-btn {
     background: var(--white);
@@ -444,4 +463,80 @@ footer .footer-links .link-group ul li a {
 /*****************/
 
 @media screen and (min-width: 768px) {
+
+    header .inner {
+        align-items: flex-start;
+    }
+
+
+    header .inner .hamburger {
+        display: none;
+    }
+
+    .desktop-left {
+        display: flex;
+        gap: 5rem;
+    }
+
+    .desktop-left .desktop-links {
+        display: flex !important;
+        gap: 3rem;
+    }
+
+    .desktop-left .desktop-links .desktop-link-group {
+        position: relative;
+    }
+
+    .desktop-links .desktop-link-group button.desktop-link {
+        display: flex;
+        gap: .5rem;
+        background-color: transparent;
+        border: none;
+        align-items: center;
+        color: var(--white);
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 0;
+    }
+
+    .desktop-link-group .desktop-link-content {
+        background-color: var(--white);
+        padding: 2rem 0rem;
+        border-radius: 6px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        width: 12.5rem;
+        padding-left: 1.3rem;
+        margin-top: 1rem;
+        margin-left: -25%;
+    }
+
+    .desktop-link-group .desktop-link-content ul {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .desktop-link-group .desktop-link-content ul li a {
+        color: var(--very-dark-grayish-blue);
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .desktop-right {
+        display: flex !important;
+    }
+
+    .desktop-right button:nth-of-type(1){
+        background-color: transparent;
+        color: var(--white);
+    }
+
+    .desktop-right button:nth-of-type(2) {
+        background: var(--white);
+        color: var(--light-red);
+    }
+
+
 }
