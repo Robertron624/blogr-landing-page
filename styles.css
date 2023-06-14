@@ -121,6 +121,8 @@ body {
 
     --very-dark-gray-blue: hsl(237, 17%, 21%);
     --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+    --custom-max-width: 1250px;
 }
 
 /**********/
@@ -466,6 +468,8 @@ footer .footer-links .link-group ul li a {
 
     header .inner {
         align-items: flex-start;
+        max-width: var(--custom-max-width);
+        margin-inline: auto;
     }
 
 
@@ -489,7 +493,8 @@ footer .footer-links .link-group ul li a {
 
     .desktop-links .desktop-link-group button.desktop-link {
         display: flex;
-        gap: .5rem;
+        flex-direction: column;
+        align-items: center;
         background-color: transparent;
         border: none;
         align-items: center;
@@ -497,6 +502,12 @@ footer .footer-links .link-group ul li a {
         font-size: 1.3rem;
         font-weight: 500;
         padding: 0;
+    }
+
+    .desktop-link-group button.desktop-link .button-content {
+        display: flex;
+        gap: .5rem;
+        align-items: center;
     }
 
     .desktop-link-group .desktop-link-content {
@@ -507,7 +518,10 @@ footer .footer-links .link-group ul li a {
         width: 12.5rem;
         padding-left: 1.3rem;
         margin-top: 1rem;
-        margin-left: -25%;
+        position: absolute;
+        left: -64%;
+
+        display: none;
     }
 
     .desktop-link-group .desktop-link-content ul {
@@ -519,9 +533,13 @@ footer .footer-links .link-group ul li a {
     .desktop-link-group .desktop-link-content ul li a {
         color: var(--very-dark-grayish-blue);
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: 500;
         text-decoration: none;
         transition: all 0.3s ease-in-out;
+    }
+
+    .desktop-link-group .desktop-link-content ul li a:hover {
+        font-weight: 700;
     }
 
     .desktop-right {
@@ -536,7 +554,33 @@ footer .footer-links .link-group ul li a {
     .desktop-right button:nth-of-type(2) {
         background: var(--white);
         color: var(--light-red);
+        transition: all 0.3s ease-in-out;
     }
 
+    .desktop-right button:nth-of-type(2):hover {
+        background: var(--very-light-red);
+        color: var(--white);
+    }
+
+    .desktop-link-content.desktop-link-active {
+        display: block;
+    }
+
+    .desktop-link-group .desktop-link {
+        position: relative;
+    }
+
+    .desktop-link-group .desktop-link::after {
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: var(--white);
+        margin-right: auto;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .desktop-link-group .desktop-link:hover::after {
+        width: 80%;
+    }
 
 }

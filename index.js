@@ -79,3 +79,40 @@ window.addEventListener('click', (e) => {
         hamburguerButton.src = '/images/icon-hamburger.svg';
     }
 });
+
+
+// Desktop header menus
+
+const desktopLinkGroups = document.querySelectorAll('.desktop-link-group');
+
+
+desktopLinkGroups.forEach(linkGroup => {
+
+    let isLinkGroupOpen = false;
+
+    const linkGroupTrigger = linkGroup.querySelector('button.desktop-link');
+
+    const linkGroupContent = linkGroup.querySelector('.desktop-link-content');
+
+    const linkGroupArrow = linkGroup.querySelector('.desktop-link img');
+
+    linkGroupTrigger.addEventListener('click', () => {
+
+        if (!isLinkGroupOpen) {
+            linkGroupContent.classList.add('desktop-link-active');
+
+            linkGroupArrow.style.transform = 'rotate(180deg)';
+
+            isLinkGroupOpen = true;
+        }
+            
+        else {
+            linkGroupContent.classList.remove('desktop-link-active');
+
+            linkGroupArrow.style.transform = 'rotate(0deg)';
+
+            isLinkGroupOpen = false;
+        }
+    });
+});
+
