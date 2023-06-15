@@ -384,7 +384,7 @@ section.state-of-art {
 
 .state-of-art .state-of-art-image {
     position: absolute;
-    bottom: 64%;
+    top: -176px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -393,11 +393,12 @@ section.state-of-art {
     align-items: center;
 }
 
+.state-of-art .state-of-art-image img {
+    max-width: 375px;
+}
+
 section.state-of-art .state-of-art-text {
-
-
     color: var(--white);
-
 }
 
 .state-of-art-text h2 {
@@ -426,6 +427,13 @@ section.state-of-art .state-of-art-text {
 .features-two .features-two-text .feature:nth-of-type(1) {
     margin-bottom: 2rem;
 }
+
+.features-two-image img,
+.design-future-image img {
+    margin-inline: auto;
+    width: 90%;
+}
+
 
 /**********/
 /* Footer */
@@ -482,6 +490,10 @@ footer .footer-links .footer-desktop-logo {
         margin-inline: auto;
     }
 
+    header .inner .logo img {
+        min-width: 101px;
+    }
+
 
     header .inner .hamburger {
         display: none;
@@ -489,6 +501,7 @@ footer .footer-links .footer-desktop-logo {
 
     .desktop-left {
         display: flex;
+        align-items: flex-end;
         gap: 5rem;
     }
 
@@ -674,6 +687,7 @@ footer .footer-links .footer-desktop-logo {
     .state-of-art .state-of-art-image {
         bottom: -23%;
         left: -30rem;
+        top: unset;
     }
 
     .state-of-art .state-of-art-image img {
@@ -772,5 +786,10 @@ footer .footer-links .footer-desktop-logo {
     footer .footer-links ul li a:hover::after {
         width: 100%;
     }
+}
 
+@media screen and (max-width: 866px) {
+    .desktop-left {
+        gap: 2vw;
+    }
 }

@@ -116,15 +116,15 @@ desktopLinkGroups.forEach(linkGroup => {
     });
 });
 
-// Get current device width
+// // Get current device width
 
-const deviceWidth = window.innerWidth;
+// const deviceWidth = window.innerWidth;
 
-const headerBackgroundShape = document.querySelector('header .background-shape svg');
+// const headerBackgroundShape = document.querySelector('header .background-shape svg');
 
-if (deviceWidth >= 768) {
-    headerBackgroundShape.setAttribute('viewBox', '200 200 400 600');
-    headerBackgroundShape.setAttribute('width', '1000');
-    headerBackgroundShape.setAttribute('height', '480');
-}
+// if (deviceWidth >= 768) {
+//     headerBackgroundShape.setAttribute('viewBox', '200 200 400 600');
+//     headerBackgroundShape.setAttribute('width', '1000');
+//     headerBackgroundShape.setAttribute('height', '480');
+// }
 
