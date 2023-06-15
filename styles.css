@@ -683,4 +683,41 @@ footer .footer-links .link-group ul li a {
         text-align: left;
     }
 
+    /* Features two */
+
+    section.features-two {
+        display: flex;
+        max-width: var(--custom-max-width);
+        margin-inline: auto;
+        width: 100%;
+        justify-content: space-between;
+        margin: 16rem 0;
+    }
+
+    section.features-two .features-two-image {
+        position: relative;
+    }
+
+    section.features-two .features-two-image img {
+        width: 50rem;
+        max-width: unset;
+        position: absolute;
+        left: -19rem;
+        top: -10rem;
+    }
+
+    section.features-two .features-two-text {
+        max-width: 32rem;
+        text-align: left;
+    }
+
+    .features-two .features-two-text .feature h3 {
+        max-width: unset;
+    }
+
+    .features-two .features-two-text .feature p {
+        max-width: unset;
+        margin-inline: 0;
+    }
+
 }
