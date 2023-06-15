@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repo](https://github.com/Robertron624/blogr-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify URL](https://effulgent-granita-3e3497.netlify.app/)
 
 ## My process
 
