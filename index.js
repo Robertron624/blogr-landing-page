@@ -120,8 +120,6 @@ desktopLinkGroups.forEach(linkGroup => {
 
 const deviceWidth = window.innerWidth;
 
-console.log("first device width: " + deviceWidth);
-
 const headerBackgroundShape = document.querySelector('header .background-shape svg');
 
 if (deviceWidth >= 768) {
